@@ -1,0 +1,77 @@
+
+<html lang="zh">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+	<title>微信卡片制作工具</title>
+	<link href="wx/style.css" rel="stylesheet" />
+	<link href="wx/preview1.css" rel="stylesheet" />
+	<link href="wx/preview2.css" rel="stylesheet" />
+	<link href="wx/preview3.css" rel="stylesheet" />
+</head>
+<body>
+	<h1>
+		微信卡片制作工具
+	</h1>
+	<div data-v-122ffe82="" class="wx-share">
+		<div data-v-122ffe82="" id="share" class="itv-flex-v--fs--c content" style="display: none">
+			<img data-v-122ffe82="" src="wx/zs.png" alt="" class="img--arrow" />
+			<p data-v-122ffe82="" class="mb32">
+				点击右上角&nbsp;
+				<img src="wx/dh.png" />
+				，分享给好友或微信群
+			</p>
+			<input type="submit" onclick="history.back(-1)" class="pxbtn" value="重新制作" />
+		</div>
+		<div data-v-122ffe82="" class="content">
+			<form id="sub" method="get" accept-charset="UTF-8">
+				<p>
+					卡片标题:
+					<input type="text" class="px" name="title" placeholder="例：邀请你访问百度" required />
+				</p>
+				<p>
+					卡片简介:
+					<input type="text" class="px" name="desc" placeholder="可留空" />
+				</p>
+				<p>
+					卡片链接:
+					<input type="text" class="px" name="link" placeholder="输入域名或链接地址" required />
+				</p>
+				<p>
+					卡片图片:
+					<input type="text" class="px" name="img" placeholder="图片的链接地址，可留空" />
+				</p>
+				<input type="submit" class="pxbtn" value="生成">
+			</form>
+		</div>
+	</div>
+	<p class="text-inline" style="text-align: center;">
+		仅支持在微信电脑版中使用
+	</p>
+	<script src="wx/jweixin-1.2.0.js"></script>
+	<script src="wx/wxshare.js"></script>
+	<script>
+		wx.config({
+			debug: false,
+			jsApiList: ["checkJsApi", "onMenuShareTimeline", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareWeibo", ],
+		});
+		var wstitle = Query("title");
+		var wsdesc = Query("desc");
+		var wslink = Query("link");
+		var qqlink = Query("link");
+		var wsimg = Query("img");
+		if ((wstitle != "") & (wslink != "")) {
+			document.getElementById("share").style.display = "";
+			document.getElementById("sub").style.display = "none"
+		}
+		function Query(name = null) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+			var r = window.location.search.substr(1).match(reg);
+			if (r != null) return decodeURIComponent(r[2]);
+			return ""
+		}
+	</script>
+</body>
+
+</html>
