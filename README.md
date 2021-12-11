@@ -4,6 +4,4 @@
 旧版下载链接：https://www.lanzoui.com/b00dd197e
 
 
-![image](https://p.pstatp.com/origin/pgc-image/f5e45ce1965b49fc8be706a274d54a52)
-![image](https://p.pstatp.com/origin/pgc-image/e2a4e4f0f4844db0bb6c8ee18c95819c)
-![image](https://p.pstatp.com/origin/pgc-image/3b9dcfd94ff344b0913f93b0e8052f58)
+![image](https://pic6.58cdn.com.cn/nowater/webim/big/n_v26de7654465834b95bfac722608fac78a.png)
