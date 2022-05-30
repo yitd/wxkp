@@ -5,7 +5,7 @@
 演示链接：https://check.lzfh.com/wx/
 
 
-旧版下载链接：https://www.lanzoui.com/b00dd197e
+旧版微信下载链接：https://www.lanzoui.com/iNfIyvwd1xa
 
 
 ![image](https://pic6.58cdn.com.cn/nowater/webim/big/n_v26de7654465834b95bfac722608fac78a.png)
